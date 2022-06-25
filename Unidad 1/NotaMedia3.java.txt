@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class NotaMedia3 {
+    public static void main(String args[]) {
+        int nota1;
+        int nota2;
+        int nota3;
+        int notaMedia;
+        Scanner in=new Scanner(System.in);
+        //Pedir nota1
+        System.out.println("Indica a nota 1:");
+	    //Ler nota1
+        nota1=in.nextInt();
+	    //Pedir nota2
+        System.out.println("Indica a nota 2:");
+	    //Ler nota 2
+        nota2=in.nextInt();
+	    //Pedir nota3
+        System.out.println("Indica a nota 3:");
+	    //Ler nota3
+        nota3=in.nextInt();
+	    //Calcular notaMedia=(nota1+nota2+nota3)/3
+        notaMedia=(nota1+nota2+nota3)/3;
+	    //Mostrar notaMedia
+        System.out.println("Nota media = " + notaMedia);
+    }
+}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class ContadorParesIntervalo {
+    public static void main(String args[]) {
+        Scanner in=new Scanner(System.in);
+        System.out.println("Introduce o número menor do intervalo:");
+        int numMenor=in.nextInt();
+        System.out.println("Introduce o número maior do intervalo:");
+        int numMaior=in.nextInt();
+        if (numMenor%2!=0){
+            numMenor++;
+        }
+        if (numMaior%2!=0){
+            numMaior--;
+        }
+        int contador=((numMaior-numMenor)/2)+1;
+        System.out.println("A cantidade de pares é: "+contador);
+    }
+}
