@@ -1,0 +1,51 @@
+package com.mycompany.proxectopersoa;
+/**
+ *
+ * @author uadmin
+ */
+public class ProbaPersoa {
+    public static final double LIMITE1_PESO=18.5;
+    public static final double LIMITE2_PESO=24.9; 
+    public static final double LIMITE3_PESO=25.0;  
+    public static final double LIMITE4_PESO=29.9;
+    public static final double LIMITE5_PESO=30.0;
+    
+    public static void interpretarIMC(double imc){
+         if (imc<LIMITE1_PESO){
+            System.out.println("A persoa ten baixo peso");
+        }else if (imc>=LIMITE1_PESO && imc<=LIMITE2_PESO){
+            System.out.println("A persoa ten peso normal");
+        }else if (imc>=LIMITE3_PESO && imc<=LIMITE4_PESO){
+             System.out.println("A persoa ten sobrepeso");
+        }else if (imc>LIMITE5_PESO){
+             System.out.println("A persoa ten obesidade");
+        }
+    }
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Creamos un obxecto persoa co construtor sen parámetros
+        Persoa persoa1=new Persoa();
+        //poñémoslle nome ao obxecto persoa1
+        persoa1.setNome("Alexandre Mougán Pena");
+        //asignámoslle un peso ao obxecto persoa1
+        persoa1.setPeso(68);
+        //asignámoslle unha altura ao obxecto persoa1 
+        persoa1.setAltura(165);
+        interpretarIMC(persoa1.calcularIMC());
+        
+        //creamos un obxecto persoa co contrutor con tres parámetros
+        Persoa persoa2=new Persoa("Helena Pousa Penedo",168,58);
+        interpretarIMC(persoa2.calcularIMC());
+        
+        //creamos un obxecto persoa co construtor con tres parámetros
+        Persoa persoa3=new Persoa("Alba Risco López",160,42);
+        interpretarIMC(persoa3.calcularIMC());
+        
+        //creamos un obxecto persoa co construtor con tres parámetros
+        Persoa persoa4=new Persoa("Abelardo Neto Pérez",150,70);
+        interpretarIMC(persoa4.calcularIMC());
+    }    
+}
